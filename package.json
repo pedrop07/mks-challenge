@@ -15,7 +15,8 @@
     "@tanstack/react-query-devtools": "^5.8.2",
     "next": "14.0.2",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "styled-components": "^6.1.1"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.1.4",
