@@ -1,5 +1,5 @@
 # MKS Frontend Challenge
-[mks challenge](https://mks-challenge-coral.vercel.app) é um site dedicado a super-heróis, onde você pode explorar uma lista com mais de 500 heróis e criar batalhas para saber quem é o mais forte.
+[mks challenge](https://mks-challenge-coral.vercel.app) é um site desenvolvido como parte de um desafio para um processo seletivo. Trata-se de um e-commerce com alguns produtos que estão sendo consumidos pela API fornecida pela empresa.
 
 ## Tecnologias utilizadas
 - [TypeScript](https://www.typescriptlang.org)
