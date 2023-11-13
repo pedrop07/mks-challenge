@@ -2,12 +2,12 @@ import Image from 'next/image';
 import {
   StyledDeleteItemButton,
   StyledCartItem,
-  StyledCartItemActionButtonsContainer,
-  StyledCartItemActionButtonsTitle,
+  StyledAmountTitle,
   StyledCartItemButtonContainer,
   StyledCartItemImageContainer,
   StyledCartItemName,
   StyledCartItemPrice,
+  StyledHandleAmountButton,
 } from './styles';
 import { Button, Divider, Flex, Popover } from 'antd';
 import { useState } from 'react';
@@ -90,22 +90,20 @@ export function CartItem({ cartItem }: Props) {
 
         <StyledCartItemName>{cartItem.name}</StyledCartItemName>
       </Flex>
-      <StyledCartItemActionButtonsContainer>
+      <Flex gap={16}>
         <div>
-          <StyledCartItemActionButtonsTitle>
-            Qtd:
-          </StyledCartItemActionButtonsTitle>
+          <StyledAmountTitle>Qtd:</StyledAmountTitle>
 
           <StyledCartItemButtonContainer>
-            <button
+            <StyledHandleAmountButton
               disabled={cartItem.cartAmount === 1}
               onClick={handleDecrementCartAmount}
             >
               -
-            </button>
+            </StyledHandleAmountButton>
             <Divider
               style={{
-                marginRight: '6px',
+                margin: '0px 6px 0px 0px',
                 height: 18,
                 background: '#bfbfbf',
               }}
@@ -114,23 +112,23 @@ export function CartItem({ cartItem }: Props) {
             <span data-testid={'amount-test-id'}>{cartItem.cartAmount}</span>
             <Divider
               style={{
-                marginLeft: '6px',
+                margin: '0px 0px 0px 6px',
                 height: 18,
                 background: '#bfbfbf',
               }}
               type="vertical"
             />
-            <button
+            <StyledHandleAmountButton
               disabled={cartItem.cartAmount === cartItem.amount}
               onClick={handleIncrementCartAmount}
             >
               +
-            </button>
+            </StyledHandleAmountButton>
           </StyledCartItemButtonContainer>
         </div>
 
         <StyledCartItemPrice>R${cartItem.price}</StyledCartItemPrice>
-      </StyledCartItemActionButtonsContainer>
+      </Flex>
     </StyledCartItem>
   );
 }

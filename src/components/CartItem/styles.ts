@@ -94,7 +94,9 @@ export const StyledCartItemPrice = styled.span`
   font-variant-numeric: tabular-nums;
 
   margin-top: 1.75rem;
-  display: inline-block;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 
   @media (max-width: 640px) {
     margin-top: 0rem;
@@ -107,18 +109,7 @@ export const StyledCartItemPrice = styled.span`
   }
 `;
 
-export const StyledCartItemActionButtonsContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-
-  @media (max-width: 640px) {
-    justify-content: center;
-    align-items: center;
-  }
-`;
-
-export const StyledCartItemActionButtonsTitle = styled.span`
+export const StyledAmountTitle = styled.span`
   color: #000;
   font-size: 0.75rem;
   display: inline-block;
@@ -136,36 +127,35 @@ export const StyledCartItemButtonContainer = styled.div`
   align-items: center;
   gap: 0.25rem;
 
-  padding: 0.5rem 0.75rem;
-
   border: 1px solid #bfbfbf;
   border-radius: 8px;
+`;
 
-  button {
-    all: unset;
-    cursor: pointer;
+export const StyledHandleAmountButton = styled.button`
+  all: unset;
+  cursor: pointer;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    font-size: 1.25rem;
-    font-weight: 500;
+  font-size: 1.45rem;
+  font-weight: 500;
 
-    border-radius: 100%;
-    width: 15px;
-    height: 15px;
+  padding: 0.35rem 0.65rem;
+  width: 100%;
+  height: 100%;
 
-    color: #000;
+  color: #000;
 
-    &:not(:disabled):hover {
-      color: ${({ theme }) => theme.colors.primary};
-      background-color: #d1d1d18c;
-    }
+  &:not(:disabled):hover,
+  &:not(:disabled):focus {
+    color: ${({ theme }) => theme.colors.primary};
+    background-color: #d1d1d18c;
+  }
 
-    &:disabled {
-      opacity: 0.3;
-      cursor: not-allowed;
-    }
+  &:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
   }
 `;
