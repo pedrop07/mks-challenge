@@ -4,7 +4,7 @@ import { CustomThemeProvider } from '@/providers/ThemeProvider';
 import userEvent from '@testing-library/user-event';
 import { useCartStore } from '@/store/CartStore';
 import { ReactNode } from 'react';
-import { CartItem as TypeCartItem } from '@/@types/CartItem';
+import { CartItem as TypeCartItem } from '@/interfaces/CartItem';
 
 const mockCardItemProps: TypeCartItem = {
   id: 3,

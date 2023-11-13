@@ -12,7 +12,7 @@ import {
 import { Button, Divider, Flex, Popover } from 'antd';
 import { useState } from 'react';
 import { useCartStore } from '@/store/CartStore';
-import { CartItem } from '@/@types/CartItem';
+import { CartItem } from '@/interfaces/CartItem';
 
 interface Props {
   cartItem: CartItem;

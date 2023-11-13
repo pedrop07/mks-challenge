@@ -3,7 +3,7 @@ import { act, render } from '@testing-library/react';
 import { ReactNode } from 'react';
 import { Cart } from '.';
 import userEvent from '@testing-library/user-event';
-import { CartItem } from '@/@types/CartItem';
+import { CartItem } from '@/interfaces/CartItem';
 import { priceFormatter } from '@/lib/utils';
 
 const wrapper = ({ children }: { children: ReactNode }) => (

@@ -1,7 +1,7 @@
 import { act, render } from '@testing-library/react';
 import { ProductCard } from '.';
 import { CustomThemeProvider } from '@/providers/ThemeProvider';
-import { Product } from '@/@types/Product';
+import { Product } from '@/interfaces/Product';
 import userEvent from '@testing-library/user-event';
 import { useCartStore } from '@/store/CartStore';
 import { ReactNode } from 'react';

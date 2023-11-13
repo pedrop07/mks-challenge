@@ -1,5 +1,5 @@
-import { CartItem } from '@/@types/CartItem';
-import { Product } from '@/@types/Product';
+import { CartItem } from '@/interfaces/CartItem';
+import { Product } from '@/interfaces/Product';
 import { notification } from 'antd';
 import { create } from 'zustand';
 

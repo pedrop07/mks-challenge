@@ -1,6 +1,6 @@
 'use server';
 
-import { Product } from '@/@types/Product';
+import { Product } from '@/interfaces/Product';
 import { api } from '@/services/api';
 
 interface GetProductsResponse {

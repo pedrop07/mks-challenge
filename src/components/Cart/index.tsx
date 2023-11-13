@@ -16,7 +16,7 @@ import {
 } from './styles';
 import { CartItem } from '../CartItem';
 import { Player } from '@lottiefiles/react-lottie-player';
-import { CartItem as TypeCartItem } from '@/@types/CartItem';
+import { CartItem as TypeCartItem } from '@/interfaces/CartItem';
 import { useCartStore } from '@/store/CartStore';
 import { priceFormatter } from '@/lib/utils';
 
