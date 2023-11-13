@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# MKS Frontend Challenge
+[mks challenge](https://mks-challenge-coral.vercel.app) é um site dedicado a super-heróis, onde você pode explorar uma lista com mais de 500 heróis e criar batalhas para saber quem é o mais forte.
 
-## Getting Started
+## Tecnologias utilizadas
+- [TypeScript](https://www.typescriptlang.org)
+- [React.js](https://react.dev)
+- [Next.js](https://nextjs.org/)
+- [React-query](https://tanstack.com/query/latest)
+- [Styled-components](https://styled-components.com)
+- [Zustand](https://zustand-demo.pmnd.rs)
+- [Axios](https://axios-http.com/docs/intro)
+- [Ant Design](https://ant.design)
+- [Jest](https://jestjs.io)
+- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
 
-First, run the development server:
+## Dependências para rodar localmente
+- [Node.js](https://nodejs.org/en) versão >= 18.17
+- Gerenciador de pacotes, por exemplo: [NPM](https://nodejs.org/en), [Yarn](https://yarnpkg.com), [PNPM](https://pnpm.io/pt/)
+- Variável de ambiente NEXT_PUBLIC_API_URL no arquivo .env.local, com o valor correspondente à rota da API fornecida pela empresa
 
+## Instalação e execução
+1. Clone o repositório.
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/pedrop07/mks-challenge.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Acesse o diretório do projeto.
+```bash
+cd mks-challenge
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Instale as dependências do projeto.
+```bash
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+4. Inicie o projeto em modo de desenvolvimento
+```bash
+npm run dev
+```
 
-## Learn More
+5. Abra o site em seu navegador visitando [http://localhost:3000](http://localhost:3000). Ao acessar o site, será possível visualizar todos os produtos, adicionar produtos ao carrinho, remover produtos do carrinho, ajustar a quantidade de cada produto selecionado e finalizar a compra.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Regras de negócio
+- Se o carrinho estiver vazio, a mensagem "Seu carrinho está vazio" deve aparecer no drawer.
+- Ao tentar remover um item do carrinho, um Popover com a mensagem "Remover {nome do produto} do carrinho de compras?" deve aparecer juntamente com dois botões: "Cancelar" e "Remover".selecionados para a batalha, remova um deles para escolher outro no lugar" deve aparecer no canto superior direito da tela.
+- Ao tentar adicionar o mesmo produto ao carrinho, um toast de aviso com a mensagem "O produto ${nome do produto} já foi adicionado ao seu carrinho" deve aparecer no canto superior direito da tela.
+- Quando a quantidade de um determinado produto for igual ao "amount", o botão de incrementar, identificado pelo símbolo +, deve ficar desabilitado.
+- Quando a quantidade de um determinado produto for igual a 1, o botão de decrementar, identificado pelo símbolo -, deve ficar desabilitado.
